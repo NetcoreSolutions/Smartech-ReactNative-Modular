@@ -1,0 +1,63 @@
+{
+  "name": "testingsmartmodule",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@react-native-community/async-storage": "^1.12.0",
+    "@react-native-community/checkbox": "^0.5.12",
+    "@react-native-community/clipboard": "^1.5.1",
+    "@react-native-community/masked-view": "^0.1.10",
+    "@react-native-community/slider": "^4.2.4",
+    "@react-native-firebase/app": "^14.9.1",
+    "@react-native-firebase/messaging": "^14.9.1",
+    "@react-navigation/bottom-tabs": "^5.8.0",
+    "@react-navigation/material-bottom-tabs": "5.2.5",
+    "@react-navigation/material-top-tabs": "^5.2.15",
+    "@react-navigation/native": "^6.0.10",
+    "@react-navigation/native-stack": "6.5.0",
+    "@react-navigation/stack": "^5.8.0",
+    "moment": "^2.29.3",
+    "react": "17.0.2",
+    "react-native": "0.67.2",
+    "react-native-elements": "^2.1.0",
+    "react-native-gesture-handler": "^1.7.0",
+    "react-native-image-base64": "^0.1.4",
+    "react-native-paper": "^4.0.1",
+    "react-native-popup-menu": "^0.15.12",
+    "react-native-reanimated": "^1.10.1",
+    "react-native-render-html": "^6.3.4",
+    "react-native-safe-area-context": "^3.1.1",
+    "react-native-screens": "3.0.0",
+    "react-native-sound-player": "^0.12.1",
+    "react-native-tab-view": "^2.15.0",
+    "react-native-thumbnail-video": "^0.1.2",
+    "react-native-vector-icons": "^7.1.0",
+    "react-native-video": "^5.2.0",
+    "react-navigation": "^4.4.0",
+    "react-redux": "^7.2.1",
+    "redux": "^4.0.5",
+    "smartech-appinbox-react-native": "^3.2.0",
+    "smartech-base-react-native": "^3.2.1",
+    "smartech-push-react-native": "^3.2.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/runtime": "^7.12.5",
+    "@react-native-community/eslint-config": "^2.0.0",
+    "babel-jest": "^26.6.3",
+    "eslint": "7.14.0",
+    "jest": "^26.6.3",
+    "metro-react-native-babel-preset": "^0.66.2",
+    "react-test-renderer": "17.0.2"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}

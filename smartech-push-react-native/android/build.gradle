@@ -1,0 +1,61 @@
+buildscript {
+    if (project == rootProject) {
+        repositories {
+            google()
+            mavenCentral()
+            jcenter()
+        }
+
+        dependencies {
+            classpath 'com.android.tools.build:gradle:3.5.3'
+        }
+    }
+}
+
+apply plugin: 'com.android.library'
+
+def safeExtGet(prop, fallback) {
+    rootProject.ext.has(prop) ? rootProject.ext.get(prop) : fallback
+}
+
+android {
+    compileSdkVersion safeExtGet('SmartechPushReactNative_compileSdkVersion', 29)
+    defaultConfig {
+        minSdkVersion safeExtGet('SmartechPushReactNative_minSdkVersion', 16)
+        targetSdkVersion safeExtGet('SmartechPushReactNative_targetSdkVersion', 29)
+        versionCode 1
+        versionName "1.0"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+    lintOptions {
+        disable 'GradleCompatible'
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+repositories {
+    maven { url 'https://artifacts.netcore.co.in/artifactory/android' }
+    mavenLocal()
+    maven {
+        // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
+        url("$rootDir/../node_modules/react-native/android")
+    }
+    google()
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    //noinspection GradleDynamicVersion
+    implementation "com.facebook.react:react-native:+"  // From node_modules
+    api "com.netcore.android:smartech-push:${SMARTECH_PUSH_SDK_VERSION}"
+}

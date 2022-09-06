@@ -1,0 +1,64 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  package="com.netcore.smartech_app">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+      android:name="com.netcore.smartech_app.MainApplication"
+      android:label="@string/app_name"
+      android:icon="@mipmap/ic_launcher"
+      android:roundIcon="@mipmap/ic_launcher_round"
+      android:allowBackup="false"
+      android:theme="@style/AppTheme">
+      <activity
+        android:name="com.netcore.smartech_app.MainActivity"
+        android:label="@string/app_name"
+        android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
+        android:launchMode="singleTask"
+        android:windowSoftInputMode="adjustResize">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+           </intent-filter>
+      </activity>
+
+        <meta-data
+            android:name="HANSEL_APP_ID"
+            android:value="1LF3X71GPZMPDPMH7XF8HM5DI" />
+        <meta-data
+            android:name="HANSEL_APP_KEY"
+            android:value="TXMY6EYG0EMVYT7A42DHN9CRP37TXGKU38MR92S36LX0QIKOL0" />
+        <meta-data
+            android:name="SMT_APP_ID"
+            android:value="c9e802a39412c6cccc2ba22f42258521" />
+
+        <meta-data
+            android:name="SMT_IS_NOTIFICATION_LISTENER_ENABLED"
+            android:value="0" />
+
+        <service
+            android:name=".FCM_Service"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+<!--        <meta-data-->
+<!--            android:name="SMT_APP_ID"-->
+<!--            android:value="ff4a5629301dc5aa05466aa1397962b7" />-->
+
+    </application>
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="https"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="smartechreactnative"/>
+        </intent>
+    </queries>
+
+</manifest>
